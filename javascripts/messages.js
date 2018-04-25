@@ -3,7 +3,7 @@ const messagesRequest = (loadFunction, errorFunction) => {
   myRequest.addEventListener('load', loadFunction);
   myRequest.addEventListener('error', errorFunction);
   myRequest.open('GET', '../db/messages.json');
-  myRequest.send;
+  myRequest.send();
 };
 
 module.exports = messagesRequest;
