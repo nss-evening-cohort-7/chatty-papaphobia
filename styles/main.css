@@ -1,0 +1,9 @@
+nav {
+  display: flex;
+  width: 100%;
+  min-height: 75px;
+  text-align: right;
+}
+.logo{
+  flex: 2;
+}
