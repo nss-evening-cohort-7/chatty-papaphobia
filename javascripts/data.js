@@ -1,11 +1,11 @@
 let messageData = [];
 
 const getMessages = () => {
-  return getMessages;
+  return messageData;
 };
 
 const setMessages = (messagesArray) => {
-  messages = messagesArray;
+  messageData = messagesArray;
 };
 
 module.exports = {
