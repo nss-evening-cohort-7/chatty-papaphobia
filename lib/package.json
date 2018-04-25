@@ -14,9 +14,6 @@
     "gruntify-eslint": "^4.0.0",
     "matchdep": "^2.0.0"
   },
-<<<<<<< HEAD
-=======
   "dependencies": {},
->>>>>>> master
   "description": ""
 }
