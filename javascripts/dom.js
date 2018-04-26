@@ -1,16 +1,22 @@
-// const messagesDiv = document.getElementById('message-container');
+const messagesDiv = document.getElementById('message-container');
 
-// const preloadMessages = (messages) => {
-//   let domString = "";
-//   messages.forEach((message) => {
-//     domString += `<div id = "message-card">
-//                     ${message.message}
-//                   </div>`;
-//   )};
-// };
+const preloadMessages = (messages) => {
+  let domString = '';
+  messages.forEach((message) => {
+    domString += `<div>
+                    <div class="speech-bubble" id = "message-card">
+                      <p>${message.message}</p>
+                    </div>
+                    <div class="preloaded-name">
+                      <p>${message.userId}</p>
+                    </div>
+                  </div>`;
+  });
+  return domString;
+};
 
-// const printToDom = () => {
-//   messagesDiv.innerHTML = domString(messages);
-// };
+const printToDom = (messages) => {
+  messagesDiv.innerHTML = preloadMessages(messages);
+};
 
-// module.exports = printToDom;
+module.exports = printToDom;
