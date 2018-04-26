@@ -1,4 +1,14 @@
-body{
+/* Footer */
+
+.row {
+  margin: 30px;
+}
+
+#input {
+  height: 45px;
+}
+
+body {
   background-image: url('../img/day.jpg');
   background-repeat: no-repeat;
   background-position: center center;
