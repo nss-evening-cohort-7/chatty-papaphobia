@@ -20,6 +20,7 @@ body {
 }
 
 
+
 /* ------------------------- MESSAGE CONTAINER ---------------------------- */
 #message-container{
   margin-top: 150px;
@@ -29,7 +30,6 @@ body {
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
 }
-
 #message-card{
   margin: 10px;
   max-width: 70%;
@@ -42,7 +42,7 @@ body {
 }
 .speech-bubble {
 	position: relative;
-	border: 3px solid #00aabb;
+	border: 5px solid #00aabb;
 	border-radius: .4em;
 }
 .speech-bubble:after {
@@ -57,10 +57,26 @@ body {
 	border-left: 0;
 	border-bottom: 0;
 	margin-top: -10px;
-	margin-left: -20px;
+  margin-left: -20px;
 }
-
 #input-container{
   margin: 0 auto 200px;
 }
+.preloaded-name{
+  margin-left: 10px;
+}
 /* ------------------------- END MESSAGE CONTAINER ---------------------------- */
+
+/* Rainbow Theme */
+
+.rainbow-text {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 30px;
+  -webkit-text-stroke-width: .3px;
+  -webkit-text-stroke-color: white;
+ }
+

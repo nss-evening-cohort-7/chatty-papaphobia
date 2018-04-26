@@ -4,11 +4,11 @@ const preloadMessages = (messages) => {
   let domString = '';
   messages.forEach((message) => {
     domString += `<div>
-                    <div class="speech-bubble" id = "message-card">
+                    <div class="speech-bubble" id="message-card">
                       <p>${message.message}</p>
                     </div>
                     <div class="preloaded-name">
-                      <p class="font-weight-bold">${message.userId}</p>
+                      <p>${message.userId}</p>
                     </div>
                   </div>`;
   });
