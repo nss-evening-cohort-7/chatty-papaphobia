@@ -1,14 +1,9 @@
-/* Centering Class */
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Footer */
 
+.row {
+  margin: 30px
+}
+
 #input {
-  width: 80%;
-  height: 50px;
+  height: 45px;
 }
