@@ -8,7 +8,7 @@ const preloadMessages = (messages) => {
                       <p>${message.message}</p>
                     </div>
                     <div class="preloaded-name">
-                      <p>${message.userId}</p>
+                      <p class="font-weight-bold">${message.userId}</p>
                     </div>
                   </div>`;
   });

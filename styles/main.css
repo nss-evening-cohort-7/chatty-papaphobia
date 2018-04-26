@@ -19,6 +19,8 @@ body {
   background-size: cover;
 }
 
+
+/* ------------------------- MESSAGE CONTAINER ---------------------------- */
 #message-container{
   margin-top: 150px;
   background-color: lightcyan;
@@ -29,7 +31,6 @@ body {
 }
 
 #message-card{
-  /* border: 3px solid black; */
   margin: 10px;
   max-width: 70%;
   border-radius: 10px;
@@ -58,3 +59,8 @@ body {
 	margin-top: -10px;
 	margin-left: -20px;
 }
+
+#input-container{
+  margin: 0 auto 200px;
+}
+/* ------------------------- END MESSAGE CONTAINER ---------------------------- */

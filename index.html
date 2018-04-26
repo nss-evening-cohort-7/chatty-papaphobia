@@ -20,7 +20,7 @@
 
   <div id="main-container">
     <div class="container" id="message-container"></div>
-    <div id="theme-container">
+    <div class="container text-center" id="theme-container">
       <input type="radio" id="night-sky"> Night Sky</input>
       <input type="radio" id="rainbow-text"> Rainbow Text</input>
       <input type="radio" id="larger-text"> Large Text</input>
@@ -28,20 +28,21 @@
   </div>
 
 <footer>
-  <div class="row">
-    <div class="col-xs-2 col-md-2 text-center">
+  <div class="row container" id="input-container">
+    <div class="col-xs-2 col-md-2">
       <button type="button" class="btn btn-primary btn-lg" id="clear">Clear</button>
     </div>
     <div class="col-xs-8 col-md-8">
       <input type="text" class="form-control" placeholder="Enter Message" aria-describedby="basic-addon1" id="input">
     </div>
-    <div class="col-xs-2 col-md-2 text-center">
+    <div class="col-xs-2 col-md-2">
       <button type="button" class="btn btn-success btn-lg" id="send">Send</button>
     </div>
   </div>
 </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="./dist/app.js"></script>
 </body>
 </html>
