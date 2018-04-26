@@ -20,6 +20,20 @@ body {
   background-size: cover;
 }
 
+/* Night Sky Theme */
+
+.night-sky {
+  background-image: url('../img/night.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: lightblue;
+}
+
 /* Rainbow Theme */
 
 .rainbow-text {
@@ -32,3 +46,4 @@ body {
   -webkit-text-stroke-width: .3px;
   -webkit-text-stroke-color: white;
  }
+
