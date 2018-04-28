@@ -10,13 +10,35 @@
   <title>Chatty Papaphobia</title>
 </head>
 <body>
+<!-- Navbar -->
+<nav id="user-nav">
+      <div class="logo">
+        <img src="./img/logo.png">
+      </div>
+  <div class="users-wrap">
 
-  <div id="user-nav">
-    <button id="stix">Stix</button>
-    <button id="anna">Anna</button>
-    <button id="mary-alice">Mary-Alice</button>
-    <button id="ana">Ana</button>
+    <div class="btn-wrap">
+    <button id="stix" style="background: url(./img/stix.jpeg)"></button>
+    <label>Stix</label>
+    </div>
+
+    <div class="btn-wrap">
+    <button id="anna" style="background: url(./img/anna.jpeg)"></button>
+    <label>Anna</label>
+</div>
+
+<div class="btn-wrap">
+    <button id="mary-alice" style="background: url(./img/mary-alice.jpeg)"></button>
+    <label>Mary</label>
+</div>
+
+<div class="btn-wrap">
+    <button id="ana" style="background: url(./img/ana.jpeg)"></button>
+    <label>Ana</label>
+</div>
   </div>
+</nav>
+<!-- Navbar/End -->
 
   <div id="main-container">
     <div class="container" id="message-container"></div>
@@ -39,7 +61,7 @@
       <input type="text" class="form-control" placeholder="Enter Message" aria-describedby="basic-addon1" id="input">
     </div>
     <div class="col-xs-2 col-md-2 text-center">
-      <button type="button" class="btn btn-success btn-lg" id="send">Send</button>
+      <button type="button" disabled class="btn btn-success btn-lg" id="send">Send</button>
     </div>
   </div>
 </footer>

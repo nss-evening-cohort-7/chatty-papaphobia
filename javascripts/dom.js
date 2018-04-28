@@ -19,4 +19,23 @@ const printToDom = (messages) => {
   messagesDiv.innerHTML = preloadMessages(messages);
 };
 
-module.exports = printToDom;
+// new msgDom
+const addMessage = (message, username) => {
+  const messageContainer = document.getElementById('message-container');
+
+  messageContainer.innerHTML += `
+    <div>
+      <div class="speech-bubble">
+        <p>${message}</p>
+      </div>
+      <div class="preloaded-name">
+        <p>${username}</p>
+      </div>
+    </div>
+  `;
+};
+
+module.exports = {
+  addMessage,
+  printToDom,
+};
