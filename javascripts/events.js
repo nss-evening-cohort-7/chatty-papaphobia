@@ -66,12 +66,39 @@ const clear = (e) => {
   messageContainer.innerHTML = '';
 };
 
+const addEventListenerToRadio = (type, idOrClass, fn) => {
+  if (type === 'id') {
+    const radio = document.getElementById(idOrClass);
+    radio.addEventListener('click', fn);
+  }
+
+  const radios = document.getElementsByClassName(idOrClass);
+  for (let i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('click',fn);
+  };
+};
+
+const nightTheme = (e) => {
+  console.log('e', e);
+};
+
+const rainbowTheme = (e) => {
+  console.log('e', e);
+};
+
+const largerTheme = (e) => {
+  console.log('e', e);
+};
+
 const runAllEventListeners = () => {
   addEventListenerToButton('id', 'send', send);
   addEventListenerToButton('id','clear', clear);
   addEventListenerToButton('class', 'btn-wrap', (e) => {
     activeUser = e.target.id;
   });
+  addEventListenerToRadio('id', 'night-sky', nightTheme);
+  addEventListenerToRadio('id', 'rainbow-text-button', rainbowTheme);
+  addEventListenerToRadio('id', 'larger-text', largerTheme);
   inputMessage();
 };
 
