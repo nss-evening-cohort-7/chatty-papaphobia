@@ -42,7 +42,7 @@ margin: 30px;
 
 /* ------------------DAY THEME---------------------------------- */
 
-.day {
+#day {
   background-image: url('../img/day.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -66,7 +66,7 @@ margin: 30px;
 }
 
 #message-card p{
-  font-size: 14px;
+  font-size: 24px;
 }
 .speech-bubble {
   background-image: url('../img/day-opacity.jpg');

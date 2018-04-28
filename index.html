@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/rainbowtext.css" id="theme">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/rainbowtext.css">
+  <link rel="stylesheet" href="./styles/largertext.css">
+  <link rel="stylesheet" href="./styles/nightsky.css">
   <title>Chatty Papaphobia</title>
 </head>
-<body class="night-sky day rainbow-text">
+<body id="day">
 <!-- Navbar -->
 <nav id="user-nav">
       <div class="logo">
@@ -43,9 +46,10 @@
   <div id="main-container">
     <div class="container" id="message-container"></div>
     <div class="radios container text-center" id="theme-container">
-      <input type="radio" id="nightsky"> Night Sky</input>
-      <input type="radio" id="rainbow"> Rainbow Text</input>
-      <input type="radio" id="larger"> Large Text</input>
+      <input type="radio" id="day-button" name="theme-option" checked> Day</input>
+      <input type="radio" id="nightsky-button" name="theme-option"> Night Sky</input>
+      <input type="radio" id="rainbow-button" name="theme-option"> Rainbow Text</input>
+      <input type="radio" id="larger-button" name="theme-option"> Large Text</input>
     </div>
   </div>
 
