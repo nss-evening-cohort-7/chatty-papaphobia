@@ -4,7 +4,7 @@ const dom = require('./dom');
 const messageLoad = function () {
   const data = JSON.parse(this.responseText).messages;
   console.log('data', data);
-  dom(data);
+  dom.printToDom(data);
 };
 
 const messageError = function () {
