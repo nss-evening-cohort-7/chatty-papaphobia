@@ -46,7 +46,17 @@ const send = (e) => {
   console.log('scoping problem', activeUser);
   dom.addMessage(input.value, activeUser);
   input.value = '';
+  deleteBtn();
 
+};
+
+const deleteBtn = () => {
+  const button = document.getElementsByClassName('delete-button');
+  for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', (e) => {
+      console.log('delete button', e.target);
+    });
+  };
 };
 
 const runAllEventListeners = () => {
@@ -55,9 +65,9 @@ const runAllEventListeners = () => {
     activeUser = e.target.id;
   });
   inputMessage();
-
 };
 
 module.exports = {
   runAllEventListeners,
+  deleteBtn,
 };

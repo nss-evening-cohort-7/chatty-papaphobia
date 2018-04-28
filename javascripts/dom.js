@@ -1,3 +1,4 @@
+// const events = require('./events');
 const messagesDiv = document.getElementById('message-container');
 
 const preloadMessages = (messages) => {
@@ -9,6 +10,7 @@ const preloadMessages = (messages) => {
                     </div>
                     <div class="preloaded-name">
                       <p>${message.userId}</p>
+                      <button type="button" class="btn btn-primary btn-xs active delete-button">Delete</button>
                     </div>
                   </div>`;
   });
@@ -30,6 +32,7 @@ const addMessage = (message, username) => {
       </div>
       <div class="preloaded-name">
         <p>${username}</p>
+          <button type="button" class="btn btn-primary btn-xs active delete-button">Delete</button>
       </div>
     </div>
   `;
