@@ -1,5 +1,25 @@
 const dom = require('./dom.js');
 let activeUser = '';
+
+const nightSkyButton = getElementById('nightsky');
+const rainbowButton = getElementById('rainbow');
+const largerTextButton = getElementById('larger');
+const nightSkyTheme = document.getElementById('theme').href = './styles/nightsky.css';
+const rainbowTheme = document.getElementById('theme').href = './styles/rainbowtext.css';
+const largerTheme = document.getElementById('theme').href = './styles/largertext.css';
+
+const rainbowClick = (e) => {
+  rainbowButton.addEventListener('click', rainbowTheme);
+};
+
+const nightSkyClick = (e) => {
+  nightSkyButton.addEventListener('click', nightSkyTheme);
+};
+
+const largerClick = (e) => {
+  largerTextButton.addEventListener('click', largerTheme);
+};
+
 /* 1st parameter is the id of the element you want to add the listener to. 2nd parameter is the fn that runs when the button is clicked. */
 const addEventListenerToButton = (type, idOrClass, fn) => {
   if (type === 'id') {
@@ -55,7 +75,9 @@ const runAllEventListeners = () => {
     activeUser = e.target.id;
   });
   inputMessage();
-
+  rainbowClick();
+  nightSkyClick();
+  largerClick();
 };
 
 module.exports = {
