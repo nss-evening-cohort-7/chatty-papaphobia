@@ -53,22 +53,10 @@ const deleteBtn = () => {
   const button = document.getElementsByClassName('delete-button');
   for (let i = 0; i < button.length; i++) {
     button[i].addEventListener('click', (e) => {
-      const userTarget = e.target.parentNode.childNodes[1].innerText;
-      const userMessage = e.target.parentNode.parentNode.childNodes[0];
-      console.log('delete button', e);
-      if (userTarget === 'stix') {
-        const usersNewMsg = userMessage.parentNode;
-        usersNewMsg.classList.add('hide');
-      } else if (userTarget === 'ana') {
-        const usersNewMsg = userMessage.parentNode;
-        usersNewMsg.classList.add('hide');
-      } else if (userTarget === 'anna') {
-        const usersNewMsg = userMessage.parentNode;
-        usersNewMsg.classList.add('hide');
-      } else {
-        const usersNewMsg = userMessage.parentNode;
-        usersNewMsg.classList.add('hide');
-      }
+      if (e.target.innerHTML === 'Delete') {
+        const userNewMsg = e.target.parentNode.parentNode;
+        userNewMsg.classList.add('hide');
+      };
     });
   };
 };
