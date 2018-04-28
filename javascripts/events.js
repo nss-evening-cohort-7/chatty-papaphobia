@@ -43,10 +43,22 @@ const inputMessage = () => {
 
 const send = (e) => {
   const input = document.getElementById('input');
-  console.log('scoping problem', activeUser);
   dom.addMessage(input.value, activeUser);
   input.value = '';
+  deleteBtn();
 
+};
+
+const deleteBtn = () => {
+  const button = document.getElementsByClassName('delete-button');
+  for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', (e) => {
+      if (e.target.innerHTML === 'Delete') {
+        const userNewMsg = e.target.parentNode.parentNode;
+        userNewMsg.classList.add('hide');
+      };
+    });
+  };
 };
 
 const clear = (e) => {
@@ -61,9 +73,9 @@ const runAllEventListeners = () => {
     activeUser = e.target.id;
   });
   inputMessage();
-
 };
 
 module.exports = {
   runAllEventListeners,
+  deleteBtn,
 };
