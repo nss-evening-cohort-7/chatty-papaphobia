@@ -60,8 +60,14 @@ const send = (e) => {
 
 };
 
+const clear = (e) => {
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.innerHTML = '';
+};
+
 const runAllEventListeners = () => {
   addEventListenerToButton('id', 'send', send);
+  addEventListenerToButton('id','clear', clear);
   addEventListenerToButton('class', 'btn-wrap', (e) => {
     activeUser = e.target.id;
   });
