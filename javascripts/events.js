@@ -14,6 +14,14 @@ const addEventListenerToButton = (type, idOrClass, fn) => {
 
 };
 
+// const setColor = (e) => {
+//   let target = e.target,
+//       status = e.target.classList.contains('active');
+//       console.log('active');
+
+//   e.target.classList.add(status ? 'inactive' : 'active');
+//   e.target.classList.remove(status ? 'active' : 'inactive');
+
 const disableSend = (length) => {
   const button = document.getElementById('send');
   button.disabled = true;
@@ -21,7 +29,7 @@ const disableSend = (length) => {
 
 const enableSend = (length) => {
   const button = document.getElementById('send');
-  button.disabled = false;
+  button.classList.remove('disabled');
 };
 
 const inputMessage = () => {
@@ -42,10 +50,13 @@ const inputMessage = () => {
 };
 
 const send = (e) => {
-  const input = document.getElementById('input');
-  console.log('scoping problem', activeUser);
-  dom.addMessage(input.value, activeUser);
-  input.value = '';
+  if (!e.target.classList.contains('disabled')) {
+    const input = document.getElementById('input');
+    console.log('scoping problem', activeUser);
+    dom.addMessage(input.value, activeUser);
+    input.value = '';
+    e.target.classList.add('disabled');
+  }
 
 };
 
