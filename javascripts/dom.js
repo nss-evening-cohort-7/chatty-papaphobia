@@ -1,4 +1,3 @@
-// const events = require('./events');
 const messagesDiv = document.getElementById('message-container');
 
 const preloadMessages = (messages) => {
@@ -26,8 +25,8 @@ const addMessage = (message, username) => {
   const messageContainer = document.getElementById('message-container');
 
   messageContainer.innerHTML += `
-    <div>
-      <div class="speech-bubble">
+    <div class="newMessage-mainContainer">
+      <div class="speech-bubble" id="new-message">
         <p>${message}</p>
       </div>
       <div class="preloaded-name">
