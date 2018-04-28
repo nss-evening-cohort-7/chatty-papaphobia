@@ -69,6 +69,14 @@ margin: 30px;
   font-size: 14px;
 }
 .speech-bubble {
+  background-image: url('../img/day-opacity.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	position: relative;
 	border: 5px solid #00aabb;
   border-radius: .4em;
@@ -76,7 +84,7 @@ margin: 30px;
   max-width: 70%;
   border-radius: 10px;
   padding: 5px;
-  background-color: snow;
+  /* background-color: snow; */
 }
 .speech-bubble:after {
 	content: '';
@@ -99,21 +107,6 @@ margin: 30px;
   margin-left: 10px;
 }
 /* ------------------------- END MESSAGE CONTAINER ---------------------------- */
-
-/* ------------------------RAINBOW THEME-------------------------------- */
-
-.rainbow-text {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-size: 30px;
-  -webkit-text-stroke-width: .3px;
-  -webkit-text-stroke-color: white;
- }
-
-
 
 @keyframes chat-bubble-animation {
   0% { -webkit-transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
