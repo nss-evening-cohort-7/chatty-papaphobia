@@ -111,13 +111,10 @@ const runAllEventListeners = () => {
     activeUser = e.target.id;
   });
   inputMessage();
-<<<<<<< HEAD
   rainbowClick();
   nightSkyClick();
   largerClick();
   dayButtonClick();
-=======
->>>>>>> master
 };
 
 module.exports = {
