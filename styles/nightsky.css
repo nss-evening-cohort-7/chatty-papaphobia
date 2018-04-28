@@ -34,3 +34,11 @@
 #night-sky .speech-bubble:after {
 	border-right-color: snow;
 }
+
+#night-sky .theme-text {
+  color: snow;
+}
+
+#night-sky .delete-button {
+  background-color: #2c659e;
+}

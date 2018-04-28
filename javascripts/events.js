@@ -35,7 +35,7 @@ const largerClick = () => {
 };
 
 const larger = () => {
-  body.id = 'larger';
+  body.id = 'larger-text';
 };
 
 /* 1st parameter is the id of the element you want to add the listener to. 2nd parameter is the fn that runs when the button is clicked. */

@@ -1,4 +1,4 @@
-/* Navbar */
+/*--------------------------------NAVBAR-------------------------------- */
 nav {
   display: flex;
   width: 100%;
@@ -6,6 +6,7 @@ nav {
 
 .logo{
   flex:2;
+  margin: 20px;
 }
 
 .users-wrap{
@@ -30,11 +31,11 @@ height: 100px;
 label{
   margin-left: 30px;
   margin-right: 30px;
+  font-size: 20px;
+  color: white;
 }
-/* navbar/End */
 
-
-/* Footer */
+/*-----------------------FOOTER------------------------------ */
 
 .row {
 margin: 30px;
@@ -70,7 +71,7 @@ margin: 30px;
 }
 
 #message-card p{
-  font-size: 24px;
+  font-size: 18px;
 }
 .speech-bubble {
   background-image: url('../img/day-opacity.jpg');
@@ -88,7 +89,6 @@ margin: 30px;
   max-width: 70%;
   border-radius: 10px;
   padding: 5px;
-  /* background-color: snow; */
 }
 .speech-bubble:after {
 	content: '';
@@ -109,6 +109,23 @@ margin: 30px;
 }
 .preloaded-name{
   margin-left: 10px;
+}
+
+#day .delete-button {
+  background-color: #f79bcf;
+}
+
+/*-----------------------THEME BUTTONS------------------- */
+
+.theme-button {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.theme-text {
+  font-size: 20px;
+  color: hotpink;
 }
 /* ------------------------- END MESSAGE CONTAINER ---------------------------- */
 
