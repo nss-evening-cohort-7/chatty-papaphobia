@@ -1,3 +1,68 @@
+.night-sky {
+  background-image: url('../img/night.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: snow;
+}
+
+#message-container{
+  margin-top: 150px;
+  background-color: #6aacc4;
+  border: 8px solid lightcyan;
+  border-radius: 30px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+#message-card{
+  margin: 10px;
+  max-width: 70%;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: snow;
+}
+#message-card p{
+  font-size: 24px;
+  color: snow;
+}
+.speech-bubble {
+	position: relative;
+	border: 5px solid snow;
+  border-radius: .4em;
+  background-image: url('../img/night-opacity.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: snow;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+  margin-left: -20px;
+}
+#input-container{
+  margin: 0 auto 200px;
+}
+.preloaded-name{
+  margin-left: 10px;
+}
+
 /* Navbar */
 nav {
   display: flex;
@@ -40,73 +105,8 @@ margin: 30px;
   height: 45px;
 }
 
-/* ------------------DAY THEME---------------------------------- */
+/* Footer */
 
-.day {
-  background-image: url('../img/day.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-/* ------------------------- MESSAGE CONTAINER ---------------------------- */
-#message-container{
-  margin-top: 40px;
-  background-color: lightcyan;
-  border: 8px solid cornflowerblue;
-  border-radius: 30px;
-  padding: 5px;
-  min-height: 700px;
-  min-width: 325px;;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#message-card p{
-  font-size: 14px;
-}
-.speech-bubble {
-  background-image: url('../img/day-opacity.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	position: relative;
-	border: 5px solid #00aabb;
-  border-radius: .4em;
-  margin: 10px;
-  max-width: 70%;
-  border-radius: 10px;
-  padding: 5px;
-  /* background-color: snow; */
-}
-.speech-bubble:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 20px solid transparent;
-	border-right-color: #00aabb;
-	border-left: 0;
-	border-bottom: 0;
-	margin-top: -10px;
-  margin-left: -20px;
-}
-#input-container{
-  margin: 0 auto 200px;
-}
-.preloaded-name{
-  margin-left: 10px;
-}
-/* ------------------------- END MESSAGE CONTAINER ---------------------------- */
 
 @keyframes chat-bubble-animation {
   0% { -webkit-transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -136,4 +136,3 @@ margin: 30px;
   90.69% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
 }
-

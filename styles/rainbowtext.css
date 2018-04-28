@@ -40,24 +40,17 @@ margin: 30px;
   height: 45px;
 }
 
-/* ------------------DAY THEME---------------------------------- */
+.rainbow-text {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  color: black;
+ }
 
-.day {
-  background-image: url('../img/day.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-/* ------------------------- MESSAGE CONTAINER ---------------------------- */
-#message-container{
+ #message-container{
   margin-top: 40px;
-  background-color: lightcyan;
-  border: 8px solid cornflowerblue;
+  background-color: cyan;
+  border: 8px solid snow;
   border-radius: 30px;
   padding: 5px;
   min-height: 700px;
@@ -67,24 +60,24 @@ margin: 30px;
 
 #message-card p{
   font-size: 14px;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 30px;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
 }
 .speech-bubble {
-  background-image: url('../img/day-opacity.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 	position: relative;
-	border: 5px solid #00aabb;
+	border: 5px solid hotpink;
   border-radius: .4em;
   margin: 10px;
   max-width: 70%;
   border-radius: 10px;
   padding: 5px;
-  /* background-color: snow; */
+  background-color: snow;
 }
 .speech-bubble:after {
 	content: '';
@@ -94,7 +87,7 @@ margin: 30px;
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-right-color: #00aabb;
+	border-right-color: hotpink;
 	border-left: 0;
 	border-bottom: 0;
 	margin-top: -10px;
@@ -106,6 +99,10 @@ margin: 30px;
 .preloaded-name{
   margin-left: 10px;
 }
+
+#send {
+  color: white;
+ }
 /* ------------------------- END MESSAGE CONTAINER ---------------------------- */
 
 @keyframes chat-bubble-animation {
@@ -136,4 +133,3 @@ margin: 30px;
   90.69% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
   100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
 }
-
