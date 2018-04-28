@@ -43,7 +43,6 @@ const inputMessage = () => {
 
 const send = (e) => {
   const input = document.getElementById('input');
-  console.log('scoping problem', activeUser);
   dom.addMessage(input.value, activeUser);
   input.value = '';
   deleteBtn();
@@ -54,7 +53,12 @@ const deleteBtn = () => {
   const button = document.getElementsByClassName('delete-button');
   for (let i = 0; i < button.length; i++) {
     button[i].addEventListener('click', (e) => {
-      console.log('delete button', e.target);
+      const userTarget = e.target.parentNode.childNodes[1].innerText;
+      const userMessage = e.target.parentNode.parentNode;
+      console.log('delete button', e);
+      if (userTarget === 'stix') {
+        userMessage.removeChild(userMessage.childNodes[0]);
+      }
     });
   };
 };
