@@ -55,11 +55,13 @@ margin: 30px;
 
 /* ------------------------- MESSAGE CONTAINER ---------------------------- */
 #message-container{
-  margin-top: 150px;
+  margin-top: 40px;
   background-color: lightcyan;
   border: 8px solid cornflowerblue;
   border-radius: 30px;
-  padding: 20px;
+  padding: 5px;
+  min-height: 700px;
+  min-width: 325px;;
   font-family: 'Montserrat', sans-serif;
 }
 
