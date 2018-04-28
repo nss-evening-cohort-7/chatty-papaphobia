@@ -65,6 +65,11 @@ const clear = (e) => {
   messageContainer.innerHTML = '';
 };
 
+const clear = (e) => {
+  const messageContainer = document.getElementById('message-container');
+  messageContainer.innerHTML = '';
+};
+
 const runAllEventListeners = () => {
   addEventListenerToButton('id', 'send', send);
   addEventListenerToButton('id','clear', clear);
