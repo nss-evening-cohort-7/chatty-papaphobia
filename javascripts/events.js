@@ -14,13 +14,16 @@ const addEventListenerToButton = (type, idOrClass, fn) => {
 
 };
 
-// const setColor = (e) => {
-//   let target = e.target,
-//       status = e.target.classList.contains('active');
-//       console.log('active');
+const activeUserBorderColor = (e) => {
+  const pendingActiveElement = e.target;
+  const existingActiveElements = document.getElementsByClassName('active');
+  for (let j = 0; j < existingActiveElements.length; j++) {
+    const currentElement = existingActiveElements[j];
+    if (currentElement.classList.remove('active'));
+  }
 
-//   e.target.classList.add(status ? 'inactive' : 'active');
-//   e.target.classList.remove(status ? 'active' : 'inactive');
+  pendingActiveElement.classList.add('active');
+};
 
 const disableSend = (length) => {
   const button = document.getElementById('send');
@@ -65,20 +68,11 @@ const clear = (e) => {
   messageContainer.innerHTML = '';
 };
 
-const clear = (e) => {
-  const messageContainer = document.getElementById('message-container');
-  messageContainer.innerHTML = '';
-};
-
-const clear = (e) => {
-  const messageContainer = document.getElementById('message-container');
-  messageContainer.innerHTML = '';
-};
-
 const runAllEventListeners = () => {
   addEventListenerToButton('id', 'send', send);
   addEventListenerToButton('id','clear', clear);
   addEventListenerToButton('class', 'btn-wrap', (e) => {
+    activeUserBorderColor(e);
     activeUser = e.target.id;
   });
   inputMessage();
