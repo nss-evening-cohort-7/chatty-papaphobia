@@ -13,6 +13,7 @@ const dayButtonClick = () => {
 
 const day = () => {
   body.id = 'day';
+  deleteBtn();
 };
 
 const nightSkyClick = () => {
