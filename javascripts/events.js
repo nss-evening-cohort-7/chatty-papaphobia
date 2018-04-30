@@ -13,7 +13,6 @@ const dayButtonClick = () => {
 
 const day = () => {
   body.id = 'day';
-  deleteBtn();
 };
 
 const nightSkyClick = () => {
@@ -21,7 +20,6 @@ const nightSkyClick = () => {
 };
 const nightSky = () => {
   body.id = 'night-sky';
-  deleteBtn();
 };
 
 const rainbowClick = () => {
@@ -30,7 +28,6 @@ const rainbowClick = () => {
 
 const rainbow = () => {
   body.id = 'rainbow-text';
-  deleteBtn();
 };
 
 const largerClick = () => {
@@ -39,7 +36,6 @@ const largerClick = () => {
 
 const larger = () => {
   body.id = 'larger-text';
-  deleteBtn();
 };
 
 /* 1st parameter is the id of the element you want to add the listener to. 2nd parameter is the fn that runs when the button is clicked. */
@@ -95,6 +91,7 @@ const deleteBtn = () => {
   const button = document.getElementsByClassName('delete-button');
   for (let i = 0; i < button.length; i++) {
     button[i].addEventListener('click', (e) => {
+      console.log('new message e', e);
       if (e.target.innerHTML === 'Delete') {
         const userNewMsg = e.target.parentNode.parentNode;
         userNewMsg.classList.add('hide');
