@@ -52,6 +52,17 @@ const addEventListenerToButton = (type, idOrClass, fn) => {
 
 };
 
+const activeUserBorderColor = (e) => {
+  const pendingActiveElement = e.target;
+  const existingActiveElements = document.getElementsByClassName('active');
+  for (let j = 0; j < existingActiveElements.length; j++) {
+    const currentElement = existingActiveElements[j];
+    if (currentElement.classList.remove('active'));
+  }
+
+  pendingActiveElement.classList.add('active');
+};
+
 const disableSend = (length) => {
   const button = document.getElementById('send');
   button.disabled = true;
@@ -59,7 +70,7 @@ const disableSend = (length) => {
 
 const enableSend = (length) => {
   const button = document.getElementById('send');
-  button.disabled = false;
+  button.classList.remove('disabled');
 };
 
 const inputMessage = () => {
@@ -80,6 +91,14 @@ const inputMessage = () => {
 };
 
 const send = (e) => {
+  if (!e.target.classList.contains('disabled')) {
+    const input = document.getElementById('input');
+    console.log('scoping problem', activeUser);
+    dom.addMessage(input.value, activeUser);
+    input.value = '';
+    e.target.classList.add('disabled');
+  }
+
   const input = document.getElementById('input');
   dom.addMessage(input.value, activeUser);
   input.value = '';
@@ -108,6 +127,7 @@ const runAllEventListeners = () => {
   addEventListenerToButton('id', 'send', send);
   addEventListenerToButton('id','clear', clear);
   addEventListenerToButton('class', 'btn-wrap', (e) => {
+    activeUserBorderColor(e);
     activeUser = e.target.id;
   });
   inputMessage();
