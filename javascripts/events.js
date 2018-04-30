@@ -91,7 +91,6 @@ const deleteBtn = () => {
   const button = document.getElementsByClassName('delete-button');
   for (let i = 0; i < button.length; i++) {
     button[i].addEventListener('click', (e) => {
-      console.log('new message e', e);
       if (e.target.innerHTML === 'Delete') {
         const userNewMsg = e.target.parentNode.parentNode;
         userNewMsg.classList.add('hide');
