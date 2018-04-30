@@ -1,4 +1,4 @@
-/* Navbar */
+/*--------------------------------NAVBAR-------------------------------- */
 nav {
   display: flex;
   width: 100%;
@@ -6,6 +6,7 @@ nav {
 
 .logo{
   flex:2;
+  margin: 20px;
 }
 
 .active {
@@ -17,6 +18,10 @@ nav {
 .users-wrap{
   display: flex;
   width: 70%;
+}
+
+#new-message {
+  font-size: 24px;
 }
 
 button {
@@ -31,16 +36,18 @@ outline: 0;
   margin: 30px;
 }
 
-label {
+label{
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 20px;
+  color: white;
   padding-top:10px;
   display:flex;
   align-content:center;
   justify-content: center;
 }
-/* navbar/End */
 
-
-/* Footer */
+/*-----------------------FOOTER------------------------------ */
 
 .row {
 margin: 30px;
@@ -50,7 +57,9 @@ margin: 30px;
   height: 45px;
 }
 
-body {
+/* ------------------DAY THEME---------------------------------- */
+
+#day {
   background-image: url('../img/day.jpg');
   background-repeat: no-repeat;
   background-position: center center;
@@ -74,9 +83,17 @@ body {
 }
 
 #message-card p{
-  font-size: 14px;
+  font-size: 18px;
 }
 .speech-bubble {
+  background-image: url('../img/day-opacity.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	position: relative;
 	border: 5px solid #00aabb;
   border-radius: .4em;
@@ -84,7 +101,6 @@ body {
   max-width: 70%;
   border-radius: 10px;
   padding: 5px;
-  background-color: snow;
 }
 .speech-bubble:after {
 	content: '';
@@ -106,22 +122,24 @@ body {
 .preloaded-name{
   margin-left: 10px;
 }
+
+#day .delete-button {
+  background-color: #f79bcf;
+}
+
+/*-----------------------THEME BUTTONS------------------- */
+
+.theme-button {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.theme-text {
+  font-size: 20px;
+  color: hotpink;
+}
 /* ------------------------- END MESSAGE CONTAINER ---------------------------- */
-
-/* Rainbow Theme */
-
-.rainbow-text {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-size: 30px;
-  -webkit-text-stroke-width: .3px;
-  -webkit-text-stroke-color: white;
- }
-
-
 
 
 

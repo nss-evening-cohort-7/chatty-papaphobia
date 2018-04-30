@@ -1,10 +1,11 @@
 const loadMessages = require('./messages');
 const dom = require('./dom');
+const events = require('./events');
 
 const messageLoad = function () {
   const data = JSON.parse(this.responseText).messages;
-  console.log('data', data);
   dom.printToDom(data);
+  events.deleteBtn();
 };
 
 const messageError = function () {

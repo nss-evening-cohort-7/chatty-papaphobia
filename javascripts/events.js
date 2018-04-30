@@ -1,5 +1,43 @@
 const dom = require('./dom.js');
 let activeUser = '';
+
+const dayButton = document.getElementById('day-button');
+const nightSkyButton = document.getElementById('nightsky-button');
+const rainbowButton = document.getElementById('rainbow-button');
+const largerTextButton = document.getElementById('larger-button');
+const body = document.getElementsByTagName('body')[0];
+
+const dayButtonClick = () => {
+  dayButton.addEventListener('click', day);
+};
+
+const day = () => {
+  body.id = 'day';
+};
+
+const nightSkyClick = () => {
+  nightSkyButton.addEventListener('click', nightSky);
+};
+const nightSky = () => {
+  body.id = 'night-sky';
+};
+
+const rainbowClick = () => {
+  rainbowButton.addEventListener('click', rainbow);
+};
+
+const rainbow = () => {
+  body.id = 'rainbow-text';
+};
+
+const largerClick = () => {
+  largerTextButton.addEventListener('click', larger);
+};
+
+const larger = () => {
+  body.id = 'larger-text';
+};
+
 /* 1st parameter is the id of the element you want to add the listener to. 2nd parameter is the fn that runs when the button is clicked. */
 const addEventListenerToButton = (type, idOrClass, fn) => {
   if (type === 'id') {
@@ -61,6 +99,23 @@ const send = (e) => {
     e.target.classList.add('disabled');
   }
 
+  const input = document.getElementById('input');
+  dom.addMessage(input.value, activeUser);
+  input.value = '';
+  deleteBtn();
+
+};
+
+const deleteBtn = () => {
+  const button = document.getElementsByClassName('delete-button');
+  for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', (e) => {
+      if (e.target.innerHTML === 'Delete') {
+        const userNewMsg = e.target.parentNode.parentNode;
+        userNewMsg.classList.add('hide');
+      };
+    });
+  };
 };
 
 const clear = (e) => {
@@ -76,9 +131,13 @@ const runAllEventListeners = () => {
     activeUser = e.target.id;
   });
   inputMessage();
-
+  rainbowClick();
+  nightSkyClick();
+  largerClick();
+  dayButtonClick();
 };
 
 module.exports = {
   runAllEventListeners,
+  deleteBtn,
 };

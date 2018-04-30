@@ -5,10 +5,11 @@ const preloadMessages = (messages) => {
   messages.forEach((message) => {
     domString += `<div>
                     <div class="speech-bubble" id="message-card">
-                      <p>${message.message}</p>
+                      <p><span>${message.message}</span></p>
                     </div>
                     <div class="preloaded-name">
                       <p>${message.userId}</p>
+                      <button type="button" class="btn btn-primary btn-xs active delete-button">Delete</button>
                     </div>
                   </div>`;
   });
@@ -24,12 +25,13 @@ const addMessage = (message, username) => {
   const messageContainer = document.getElementById('message-container');
 
   messageContainer.innerHTML += `
-    <div>
-      <div class="speech-bubble">
-        <p>${message}</p>
+    <div class="newMessage-mainContainer">
+      <div class="speech-bubble" id="new-message">
+        <p><span>${message}</span></p>
       </div>
       <div class="preloaded-name">
         <p>${username}</p>
+          <button type="button" class="btn btn-primary btn-xs active delete-button">Delete</button>
       </div>
     </div>
   `;
