@@ -20,6 +20,7 @@ const nightSkyClick = () => {
 };
 const nightSky = () => {
   body.id = 'night-sky';
+  deleteBtn();
 };
 
 const rainbowClick = () => {
@@ -28,6 +29,7 @@ const rainbowClick = () => {
 
 const rainbow = () => {
   body.id = 'rainbow-text';
+  deleteBtn();
 };
 
 const largerClick = () => {
@@ -36,6 +38,7 @@ const largerClick = () => {
 
 const larger = () => {
   body.id = 'larger-text';
+  deleteBtn();
 };
 
 /* 1st parameter is the id of the element you want to add the listener to. 2nd parameter is the fn that runs when the button is clicked. */
