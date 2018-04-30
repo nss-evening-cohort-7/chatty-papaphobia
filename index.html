@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/rainbowtext.css">
+  <link rel="stylesheet" href="./styles/largertext.css">
+  <link rel="stylesheet" href="./styles/nightsky.css">
   <title>Chatty Papaphobia</title>
 </head>
-<body>
+<body id="day">
 <!-- Navbar -->
 <nav id="user-nav">
       <div class="logo">
@@ -42,20 +45,18 @@
 
   <div id="main-container">
     <div class="container" id="message-container"></div>
-    <div class="container text-center" id="theme-container">
-      <input type="radio" id="night-sky"> Night Sky</input>
-      <input type="radio" id="rainbow-text-button"> Rainbow Text</input>
-      <input type="radio" id="larger-text"> Large Text</input>
+    <div class="radios container text-center" id="theme-container">
+      <input type="radio" class="theme-button" id="day-button" name="theme-option" checked><span class="theme-text">Day</span> </input>
+      <input type="radio" class="theme-button"id="nightsky-button" name="theme-option"><span class="theme-text">Night Sky</span></input>
+      <input type="radio" class="theme-button" id="rainbow-button" name="theme-option"><span class="theme-text">Rainbow Text</span></input>
+      <input type="radio" class="theme-button" id="larger-button" name="theme-option"><span class="theme-text">Large Text</span></input>
     </div>
   </div>
-<div class="text-center">
-  <span class="rainbow-text">Rainbow Test - REMOVE BEFORE FINAL PRESENTATION</span>
-</div>
 
 <footer>
   <div class="row container" id="input-container">
     <div class="col-xs-2 col-md-2 text-center">
-      <button type="button" class="btn btn-primary btn-lg" id="clear">Clear</button>
+      <button type="button" class="btn btn-info btn-lg" id="clear">Clear</button>
     </div>
     <div class="col-xs-8 col-md-8">
       <input type="text" class="form-control" placeholder="Enter Message" aria-describedby="basic-addon1" id="input">

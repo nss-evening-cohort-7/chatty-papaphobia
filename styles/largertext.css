@@ -1,0 +1,45 @@
+#larger-text {
+  background-color: black;
+}
+
+#larger-text #message-container {
+  background-color: black;
+  border: 8px solid cyan;
+}
+#larger-text #message-card {
+  background-color: snow;
+}
+#larger-text #message-card p {
+  color: black;
+  font-size: 35px;
+}
+#larger-text .speech-bubble {
+	border: 5px solid snow;
+  background-image: none;
+}
+
+#larger-text .speech-bubble:after {
+	border-right-color: snow;
+}
+
+#larger-text .theme-text {
+  color: snow;
+}
+
+#larger-text .delete-button {
+  background-color: hotpink;
+  font-size: 24px;
+}
+
+#larger-text .btn-lg {
+ font-size: 24px;
+}
+
+#larger-text .theme-text {
+  font-size: 40px;
+  color: hotpink;
+}
+#larger-text label {
+  font-size: 36px;
+}
+

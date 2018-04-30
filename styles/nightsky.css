@@ -1,0 +1,44 @@
+#night-sky {
+  background-image: url('../img/night.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: snow;
+}
+
+#night-sky #message-container {
+  background-color: #6aacc4;
+  border: 8px solid lightcyan;
+}
+#night-sky #message-card {
+  background-color: snow;
+}
+#night-sky #message-card p{
+  color: snow;
+}
+#night-sky .speech-bubble {
+	border: 5px solid snow;
+  background-image: url('../img/night-opacity.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#night-sky .speech-bubble:after {
+	border-right-color: snow;
+}
+
+#night-sky .theme-text {
+  color: snow;
+}
+
+#night-sky .delete-button {
+  background-color: #2c659e;
+}

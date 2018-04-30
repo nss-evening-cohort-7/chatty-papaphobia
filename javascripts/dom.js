@@ -5,7 +5,7 @@ const preloadMessages = (messages) => {
   messages.forEach((message) => {
     domString += `<div>
                     <div class="speech-bubble" id="message-card">
-                      <p>${message.message}</p>
+                      <p><span>${message.message}</span></p>
                     </div>
                     <div class="preloaded-name">
                       <p>${message.userId}</p>
@@ -27,7 +27,7 @@ const addMessage = (message, username) => {
   messageContainer.innerHTML += `
     <div class="newMessage-mainContainer">
       <div class="speech-bubble" id="new-message">
-        <p>${message}</p>
+        <p><span>${message}</span></p>
       </div>
       <div class="preloaded-name">
         <p>${username}</p>
