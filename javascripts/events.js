@@ -82,26 +82,23 @@ const inputMessage = () => {
       enableSend();
     }
 
-    if (e.which === 13 || e.keyCode === 13) {
+    if (e.keyCode === 13 || e.which === 13) {
       dom.addMessage(input.value, activeUser);
       input.value = '';
-      disableSend();
+      const button = document.getElementById('send');
+      button.classList.add('disabled');
     };
+    deleteBtn();
   });
 };
 
 const send = (e) => {
-  if (!e.target.classList.contains('disabled')) {
+  if (! e.target.classList.contains('disabled')) {
     const input = document.getElementById('input');
-    console.log('scoping problem', activeUser);
     dom.addMessage(input.value, activeUser);
     input.value = '';
     e.target.classList.add('disabled');
   }
-
-  const input = document.getElementById('input');
-  dom.addMessage(input.value, activeUser);
-  input.value = '';
   deleteBtn();
 };
 
