@@ -84,13 +84,14 @@ const send = (e) => {
   dom.addMessage(input.value, activeUser);
   input.value = '';
   deleteBtn();
-
 };
 
 const deleteBtn = () => {
   const button = document.getElementsByClassName('delete-button');
+  console.log(button);
   for (let i = 0; i < button.length; i++) {
     button[i].addEventListener('click', (e) => {
+      console.log('delete', e);
       if (e.target.innerHTML === 'Delete') {
         const userNewMsg = e.target.parentNode.parentNode;
         userNewMsg.classList.add('hide');
@@ -115,6 +116,7 @@ const runAllEventListeners = () => {
   nightSkyClick();
   largerClick();
   dayButtonClick();
+  deleteBtn();
 };
 
 module.exports = {
