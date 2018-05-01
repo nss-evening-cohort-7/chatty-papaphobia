@@ -6,9 +6,16 @@
   background-color: black;
   border: 8px solid cyan;
 }
-#larger-text #message-card {
+#larger-text #message-card  {
   background-color: snow;
 }
+#larger-text #new-message {
+  background-color: snow;
+  font-size: 35px;
+}
+/* #larger-text .speech-bubble:after  {
+	border-right-color: snow;
+} */
 #larger-text #message-card p {
   color: black;
   font-size: 35px;
@@ -16,6 +23,11 @@
 #larger-text .speech-bubble {
 	border: 5px solid snow;
   background-image: none;
+}
+#larger-text .preloaded-name {
+  font-size: 24px;
+  color: snow;
+
 }
 
 #larger-text .speech-bubble:after {
